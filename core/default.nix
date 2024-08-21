@@ -4,10 +4,16 @@
 }
 :
 {
+  # Enable boot loader
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
   # Import the hardware configuration.
   imports = 
   [
     ./hardware-configuration.nix
+    ./users
+    ./services
   ];
 
   # Enable flakes and the new CLI
@@ -25,8 +31,13 @@
     vim
     wget
     curl
-    nmtui # For connecting to the Internet.
+    home-manager
   ];
+
+  # The hostname of the machine.
+  networking.hostName = "adharmos";
+  # For connecting to the Internet.
+  networking.networkmanager.enable = true;
 
   # Set vim as the default editor.
   environment.variables.EDITOR = "vim";

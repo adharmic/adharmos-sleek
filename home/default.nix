@@ -5,8 +5,8 @@
 :
 {
   # The username and home base directory for our machine.
-  home.username = "adithya";
-  home.homeDirectory = "/home/adithya/";
+  home.username = "adi";
+  home.homeDirectory = "/home/adi/";
   home.stateVersion = "24.05";
 
   # Enable the home manager service so we can build our home configurations.
@@ -38,11 +38,12 @@
   home.packages =
   with pkgs;
   [
-
   ];
 
   # IMPORTS
   imports =
   [
+    ./gui
+    ./applications
   ];
 }

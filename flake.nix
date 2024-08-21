@@ -31,7 +31,7 @@
     inherit (self) outputs;
   in
   {
-    nixosConfigurations.adharmOS = nixpkgs.lib.nixosSystem
+    nixosConfigurations.adharmos = nixpkgs.lib.nixosSystem
     {
       system = "x86_64-linux";
       specialArgs = 
@@ -45,7 +45,7 @@
         ./core
       ];
     };
-    homeConfigurations."adithya@adharmOS" = 
+    homeConfigurations."adi@adharmos" = 
     home-manager.lib.homeManagerConfiguration
     {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
