@@ -1,9 +1,5 @@
-{
-  pkgs,
-  ...
-}
-:
-{
+{pkgs, ...}
+: {
   # The username and home base directory for our machine.
   home.username = "adi";
   home.homeDirectory = "/home/adi/";
@@ -17,33 +13,29 @@
 
   # NIXPKGS
   # - We can configure and extend the nixpkgs input as we like.
-  nixpkgs = 
-  {
+  nixpkgs = {
     # We can use overlays to extend nixpkgs with programs that aren't yet in the nix repository.
     # - See https://nixos.wiki/wiki/Overlays
-    overlays = 
-    [];
+    overlays = [];
 
     # We reconfigure nixpkgs to allow unfree programs, like Discord.
-    config = 
-    {
+    config = {
       allowUnfree = true;
     };
   };
 
   # HOME PACKAGES
-  # - Keep this slim and modular. 
+  # - Keep this slim and modular.
   # - If there are lots of related packages,
   # - consider distributing this array across multiple modules.
-  home.packages =
-  with pkgs;
-  [
+  home.packages = with pkgs; [
+    discord
   ];
 
   # IMPORTS
-  imports =
-  [
+  imports = [
     ./gui
     ./applications
+    ./formatters
   ];
 }

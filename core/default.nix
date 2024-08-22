@@ -1,32 +1,24 @@
-{
-  pkgs,
-  ...
-}
-:
-{
+{pkgs, ...}
+: {
   # Enable boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Import the hardware configuration.
-  imports = 
-  [
+  imports = [
     ./hardware-configuration.nix
     ./users
     ./services
   ];
 
   # Enable flakes and the new CLI
-  nix.settings.experimental-features =
-  [
+  nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
 
   # Install the bare minimum packages required to get Nix up and running.
-  environment.systemPackages = 
-  with pkgs;
-  [
+  environment.systemPackages = with pkgs; [
     git
     vim
     wget
