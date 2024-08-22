@@ -7,4 +7,12 @@
     ./firefox
     ./filemgmt
   ];
+
+  # UNORGANIZED PACKAGES!
+  # Use this if you're just wanting to quickly install packages for your user.
+  # TODO: Modularize
+  home.packages = with pkgs; [
+    vesktop
+    swww
+  ];
 }

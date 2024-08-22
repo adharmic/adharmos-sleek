@@ -77,6 +77,7 @@
     "$mod CONTROL, K, centerwindow, "
     "$mod CONTROL, J, centerwindow, "
     "$mod, W, fullscreen, 1"
+    "$mod SHIFT, W, fullscreen, 0"
 
     # SPLIT MANAGEMENT
     "$mod, I, splitratio, +0.1"

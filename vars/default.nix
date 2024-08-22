@@ -13,6 +13,11 @@
             default = "alacritty";
             description = "Preferred terminal emulator (for shortcuts)";
           };
+          wallsPath = lib.mkOption {
+            type = lib.types.str;
+            default = "~/pictures/wallpapers";
+            description = "Path to the wallpaper directory";
+          };
         };
       };
     };
@@ -21,5 +26,6 @@
   config = {
     globalConfig.colorschemePath = "~/.config/colorschemes/cshell";
     globalConfig.termEmulator = "alacritty";
+    globalConfig.wallsPath = "~/pictures/wallpapers";
   };
 }
