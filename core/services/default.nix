@@ -6,7 +6,7 @@
     settings = rec
     {
       initial_session = {
-        command = "${pkgs.sway}/bin/sway";
+        command = "Hyprland";
         user = "adi";
       };
       default_session = initial_session;
@@ -14,8 +14,7 @@
   };
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = 
-  {
+  services.pipewire = {
     enable = true;
     alsa.enable = true;
     pulse.enable = true;

@@ -26,6 +26,9 @@
     curl
     home-manager
   ];
+  fonts.packages = with pkgs; [
+    nerdfonts
+  ];
 
   # The hostname of the machine.
   networking.hostName = "adharmos";

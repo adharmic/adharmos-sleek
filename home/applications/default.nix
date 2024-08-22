@@ -1,14 +1,9 @@
-{
-  pkgs,
-  ...
-}
-:
-{
-  imports =
-  [
+{pkgs, ...}
+: {
+  imports = [
     ./programming
     ./helix
-    ./term
+    ./terminal
     ./firefox
   ];
 }

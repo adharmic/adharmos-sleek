@@ -1,15 +1,7 @@
-{
-  vars,
-  ...
-}
-:
-{
+{...}
+: {
   wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.extraConfig = ''
-    source = ${vars.dirs.assets.cols-abs}/wallust/generated/hyprland-colors.conf
-  '';
-  imports = 
-  [
+  imports = [
     ./binds.nix
     ./startup.nix
     ./decoration.nix
