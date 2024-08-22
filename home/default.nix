@@ -37,5 +37,6 @@
     ./gui
     ./applications
     ./formatters
+    ./lsps
   ];
 }

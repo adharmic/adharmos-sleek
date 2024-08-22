@@ -1,21 +1,18 @@
 {
+  inputs,
   pkgs,
   ...
 }
-:
-{  
-  programs.helix = 
-  {
+: {
+  programs.helix = {
     enable = true;
-    package = pkgs.helix;
+    package = inputs.helix.packages."${pkgs.system}".helix;
     defaultEditor = true;
-    languages = 
-    {
-      language = 
-      [
+    languages = {
+      language = [
         {
           name = "nix";
-          formatter = { command = "alejandra";};
+          formatter = {command = "alejandra";};
           auto-format = true;
         }
       ];

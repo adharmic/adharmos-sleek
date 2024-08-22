@@ -5,5 +5,6 @@
     ./helix
     ./terminal
     ./firefox
+    ./filemgmt
   ];
 }

@@ -1,26 +1,14 @@
-{
-  pkgs,
-  ...
-}
-:
-{
+{pkgs, ...}
+: {
   imports = [
     ./prompt.nix
+    ./alacritty.nix
   ];
-  home.packages =
-  with pkgs;
-  [
+  home.packages = with pkgs; [
     # Emulators
     wezterm
 
     # Utilities
     tmux
   ];
-  programs.alacritty = 
-  {
-    enable = true;
-    settings = {
-      
-    };
-  };
 }
