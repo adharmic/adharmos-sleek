@@ -1,4 +1,5 @@
-{
+{config, ...}
+: {
   # MAIN MODIFIER KEY
   wayland.windowManager.hyprland.settings."$mod" = "SUPER";
 
@@ -15,9 +16,7 @@
   # - Move to specified corner
 
   # BINDINGS
-  wayland.windowManager.hyprland.settings.bind = 
-  [
-
+  wayland.windowManager.hyprland.settings.bind = [
     # Picture-in-Picture
     "$mod, Q, setfloating, "
     "$mod, Q, resizeactive, exact 45% 40%"
@@ -44,10 +43,10 @@
     "$mod, RETURN, exec, alacritty"
     "$mod, R, exec, rofi -show drun"
     "$mod, U, exec, obsidian"
-    "$mod, E, exec, kitty yazi"
+    "$mod, E, exec, ${config.globalConfig.termEmulator} yazi"
     "CONTROL SHIFT, 4, exec, grim -g \"$(slurp)\" - | wl-copy"
-    "$mod, T, exec, kitty nvim"
-    "$mod, Escape, exec, kitty btop"
+    "$mod, T, exec, ${config.globalConfig.termEmulator} nvim"
+    "$mod, Escape, exec, ${config.globalConfig.termEmulator} btop"
 
     # SPECIAL WORKSPACES
     "$mod, BRACKETLEFT, togglespecialworkspace, pocket-term"

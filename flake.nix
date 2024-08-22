@@ -25,7 +25,6 @@
   } @ inputs
   : let
     inherit (self) outputs;
-    sharedModule = import ./vars;
   in {
     nixosConfigurations.adharmos =
       nixpkgs.lib.nixosSystem
@@ -38,7 +37,13 @@
         modules = [
           # This file contains only the bare minimum settings required for NixOS to run.
           ./core
-          sharedModule
+
+          # This file contains hardware-specific configuration.
+          # - Not essential for OS operation.
+          ./hardware
+
+          # This module contains global variables for the Operating System.
+          ./vars
         ];
       };
     homeConfigurations."adi@adharmos" =
@@ -54,7 +59,9 @@
 
           # The misc directory holds any additional resources. Images, scripts, etc.
           ./misc
-          sharedModule
+
+          # This module contains global variables for the Operating System.
+          ./vars
         ];
       };
   };
