@@ -8,7 +8,7 @@
   [
     ./programming
     ./helix
-    ./wezterm
+    ./term
     ./firefox
   ];
 }

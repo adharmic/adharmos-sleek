@@ -2,7 +2,7 @@
 : {
   wayland.windowManager.sway = {
     enable = true;
-    config = rec
+    config = 
     {
       output = {
         eDP-1 = {
@@ -13,9 +13,9 @@
         outer = 2;
         inner = 5;
       };
-      terminal = "wezterm";
+      terminal = "alacritty";
       startup = [
-        {command = "wezterm";}
+        {command = "alacritty";}
       ];
     };
   };

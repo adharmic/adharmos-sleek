@@ -1,4 +1,5 @@
 {
+  pkgs,
   ...
 }
 :
@@ -7,6 +8,7 @@
   {
     adi = 
     {
+      shell = pkgs.fish;
       initialPassword = "letmein123";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [];

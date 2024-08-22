@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ./users
     ./services
+    ./shell
   ];
 
   # Enable flakes and the new CLI

@@ -13,9 +13,6 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     # Follow the same nixpkgs repo to keep package versions consistent.
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    
-    # Import the Helix editor.
-    helix.url = "github:helix-editor/helix/master";
   };
 
   # Outputs are the returned values from this flake.
