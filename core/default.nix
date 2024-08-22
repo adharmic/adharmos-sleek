@@ -30,6 +30,12 @@
     nerdfonts
   ];
 
+  # Hyprland for display purposes
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   # The hostname of the machine.
   networking.hostName = "adharmos";
   # For connecting to the Internet.
