@@ -3,12 +3,14 @@
 format = """
 $os\
 $username\
-[](bg:color_yellow fg:color_orange)\
+[](bg:color_yellow fg:color_orange)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](fg:color_yellow bg:color_aqua)\
 $git_branch\
 $git_status\
-[](fg:color_aqua bg:color_bg3)\
+[](fg:color_aqua bg:color_brown)\
+[](fg:color_brown bg:color_purple)\
+[](fg:color_purple bg:color_bg1)\
 $c\
 $rust\
 $golang\
@@ -18,7 +20,6 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:color_bg3 bg:color_bg1)\
 $time\
 [ ](fg:color_bg1)\
 $line_break$character"""
@@ -33,9 +34,10 @@ color_blue = '#c6e8f1'
 color_aqua = '#008eab'
 color_green = '#255a62'
 color_orange = '#db662d'
-color_purple = '#b16286'
+color_purple = '#265b75'
 color_red = '#dd998a'
 color_yellow = '#feaf3c'
+color_brown = '#137590'
 
 [os]
 disabled = false

@@ -10,6 +10,7 @@
       capslock = "leftcontrol";
       leftalt = "layer(leftalt)";
       rightalt = "leftmeta";
+      leftcontrol = "leftalt";
     };
     leftalt = {
       h = "left";
