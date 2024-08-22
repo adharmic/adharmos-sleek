@@ -1,3 +1,6 @@
+/* TODO: symlink this file based on current color scheme from Nix config*/ 
+@import url("/home/adi/.config/colorschemes/cshell/gtk.css");
+
 * {
   font-family: CaskaydiaCove Nerd Font;
   font-size: 16px;
@@ -6,23 +9,24 @@
 }
 
 /*THEMING VARIABLES*/
-@define-color module_bg @bar_bg;
-@define-color module_fg @text;
-@define-color outline @bar_fg;
-@define-color endcaps_bg @bar_fg;
-@define-color endcaps_fg @bar_bg;
-@define-color endcaps_outline @bar_fg;
+@define-color comp @coral;
+@define-color module_bg @manowar;
+@define-color module_fg @atlas;
+@define-color outline @hightide;
+@define-color endcaps_bg @hightide;
+@define-color endcaps_fg @manowar;
+@define-color endcaps_outline @sailcloth;
 @define-color hover_bg @endcaps_bg;
 @define-color hover_fg @endcaps_fg;
-@define-color inactive_bg @bar_bg;
-@define-color inactive_fg @bar_fg;
+@define-color inactive_bg @manowar;
+@define-color inactive_fg @atlas;
 @define-color active_bg @endcaps_bg;
 @define-color active_fg @endcaps_fg;
 @define-color tip_bg @module_bg;
 @define-color tip_fg @module_fg;
 
 window#waybar {
-  background: alpha(@bar_bg, 0.6);
+  background: alpha(@manowar, 0.3);
 }
 
 #workspaces {

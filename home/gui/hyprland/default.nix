@@ -1,10 +1,15 @@
-{pkgs, ...}
+{
+  config,
+  pkgs,
+  ...
+}
 : {
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
     xwayland.enable = true;
     systemd.enable = true;
+    settings.source = "${config.globalConfig.colorschemePath}/hyprland.conf";
   };
   imports = [
     ./binds.nix
