@@ -29,5 +29,6 @@
     spotify
     neomutt
     thunderbird
+    lazygit
   ];
 }
