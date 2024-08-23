@@ -1,8 +1,15 @@
-{pkgs, ...}
+{
+  lib,
+  pkgs,
+  ...
+}
 : {
   # Enable boot loader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Set time zone
+  time.timeZone = lib.mkDefault "America/Chicago";
 
   # Garbage Collection/Storage optimization
   nix.optimise = {
