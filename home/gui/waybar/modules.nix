@@ -99,7 +99,7 @@
             ""
           ];
         };
-        on-click = "sleep 0.1 && pavucontrol";
+        on-click = "sleep 0.1 && hyprctl dispatch -- exec [float] alacritty -e pulsemixer";
       };
       "mpris" = {
         max-length = 22;

@@ -17,7 +17,7 @@
     swww
 
     # Hardware controllers
-    pavucontrol
+    pulsemixer
     wireplumber
     brightnessctl
     playerctl
