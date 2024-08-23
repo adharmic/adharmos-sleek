@@ -12,7 +12,12 @@
   # Use this if you're just wanting to quickly install packages for your user.
   # TODO: Modularize
   home.packages = with pkgs; [
+    rofi-wayland-unwrapped
     vesktop
     swww
+    pavucontrol
+    wireplumber
+    btop
+    obsidian
   ];
 }

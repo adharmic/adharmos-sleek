@@ -1,5 +1,6 @@
-{pkgs, ...}
+{...}
 : {
+  services.automatic-timezoned.enable = true;
   security.polkit.enable = true;
   services.greetd = {
     enable = true;

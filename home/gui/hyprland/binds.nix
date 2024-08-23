@@ -40,13 +40,13 @@
     # TODO: Set up screenshot shortcut
     # APPLICATION SHORTCUTS
     "$mod, F, exec, firefox"
-    "$mod, RETURN, exec, alacritty"
+    "$mod, RETURN, exec, ${config.globalConfig.termEmulator}"
     "$mod, R, exec, rofi -show drun"
     "$mod, U, exec, obsidian"
-    "$mod, E, exec, ${config.globalConfig.termEmulator} yazi"
+    "$mod, E, exec, ${config.globalConfig.termEmulator} -e nnn"
     "CONTROL SHIFT, 4, exec, grim -g \"$(slurp)\" - | wl-copy"
-    "$mod, T, exec, ${config.globalConfig.termEmulator} nvim"
-    "$mod, Escape, exec, ${config.globalConfig.termEmulator} btop"
+    "$mod, T, exec, ${config.globalConfig.termEmulator} -e hx"
+    "$mod, Escape, exec, ${config.globalConfig.termEmulator} -e btop"
 
     # SPECIAL WORKSPACES
     "$mod, BRACKETLEFT, togglespecialworkspace, pocket-term"
