@@ -11,7 +11,8 @@
 - Test install on another machine
 - Extract out user-specific setup into a single file
 -- Plug-n-play implementation style
-- Automatically remove old (>7d) NixOS builds.
+- Automatically remove old (>7d) NixOS builds. (DONE)
+- dunst notifications and styling
 
 # In the future
 - Add more colorschemes

@@ -15,9 +15,17 @@
     rofi-wayland-unwrapped
     vesktop
     swww
+
+    # Hardware controllers
     pavucontrol
     wireplumber
+    brightnessctl
+    playerctl
+
     btop
     obsidian
+    fzf
+    bat
+    spotify
   ];
 }

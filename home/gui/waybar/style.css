@@ -104,6 +104,7 @@ tooltip label {
   border-radius: 24px 10px 24px 10px;
 }
 
+#network:hover,
 #mpris:hover,
 #idle_inhibitor:hover,
 #pulseaudio:hover,
