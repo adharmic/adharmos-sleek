@@ -27,5 +27,7 @@
     fzf
     bat
     spotify
+    neomutt
+    thunderbird
   ];
 }

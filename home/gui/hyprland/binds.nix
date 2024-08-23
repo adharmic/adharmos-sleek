@@ -134,7 +134,7 @@
 
     # - Media controls/F4-6
     ", F4, exec, playerctl previous"
-    ", F5, exec, playerctl play"
+    ", F5, exec, playerctl play-pause"
     ", F6, exec, playerctl next"
 
     # - Screen brightness/F7-8
@@ -154,6 +154,6 @@
     ", F12, exec, echo Framework button not yet enabled"
 
     # JUST FOR FUN
-    "$mod SHIFT, B, exec, sh wallpaper-rotation.sh"
+    "$mod SHIFT, B, exec, swww img ~/pictures/wallpapers/$(ls ~/pictures/wallpapers | shuf | head -1) --transition-type center"
   ];
 }
