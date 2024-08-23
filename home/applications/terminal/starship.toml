@@ -10,7 +10,6 @@ $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_brown)\
 [](fg:color_brown bg:color_purple)\
-[](fg:color_purple bg:color_bg1)\
 $c\
 $rust\
 $golang\
@@ -20,6 +19,7 @@ $java\
 $kotlin\
 $haskell\
 $python\
+[](fg:color_purple bg:color_bg1)\
 $time\
 [ ](fg:color_bg1)\
 $line_break$character
@@ -31,7 +31,7 @@ palette = 'gruvbox_dark'
 color_fg0 = '#ffffff'
 color_bg1 = '#1d485f'
 color_bg3 = '#c6e8f1'
-color_blue = '#c6e8f1'
+color_blue = '#265b75'
 color_aqua = '#008eab'
 color_green = '#255a62'
 color_orange = '#db662d'
