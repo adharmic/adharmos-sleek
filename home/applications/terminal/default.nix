@@ -7,6 +7,7 @@
     ./lazygit
     ./eza
     ./zoxide
+    ./btop
   ];
   home.packages = with pkgs; [
     # Utilities

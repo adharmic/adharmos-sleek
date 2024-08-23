@@ -22,7 +22,6 @@
     brightnessctl
     playerctl
 
-    btop
     obsidian
     fzf
     bat
