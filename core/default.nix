@@ -4,6 +4,17 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Garbage Collection/Storage optimization
+  nix.optimise = {
+    automatic = true;
+    dates = ["07:00"];
+  };
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   # Import the hardware configuration.
   imports = [
     ./hardware-configuration.nix
