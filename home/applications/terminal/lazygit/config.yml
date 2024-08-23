@@ -1,0 +1,7 @@
+promptToReturnFromSubprocess: false
+os:
+  edit: 'hx {{filename}}'
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never

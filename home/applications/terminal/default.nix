@@ -1,9 +1,10 @@
 {pkgs, ...}
 : {
   imports = [
-    ./prompt.nix
+    ./prompt
     ./alacritty.nix
     ./tmux
+    ./lazygit
   ];
   home.packages = with pkgs; [
     # Utilities
