@@ -17,6 +17,8 @@
 
   # BINDINGS
   wayland.windowManager.hyprland.settings.bind = [
+    # Pulsemixer
+    "$mod SHIFT, V, exec, [float] alacritty -e pulsemixer"
     # Picture-in-Picture
     "$mod, Q, setfloating, "
     "$mod, Q, resizeactive, exact 45% 40%"

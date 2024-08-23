@@ -1,19 +1,12 @@
-{
-  pkgs,
-  ...
-}
-:
-{
-  users.users = 
-  {
-    adi = 
-    {
+{pkgs, ...}
+: {
+  users.users = {
+    adi = {
       shell = pkgs.fish;
       initialPassword = "letmein123";
       isNormalUser = true;
       openssh.authorizedKeys.keys = [];
-      extraGroups = 
-      [
+      extraGroups = [
         "wheel"
         "input"
       ];
