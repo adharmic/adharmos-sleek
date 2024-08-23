@@ -1,6 +1,6 @@
 # Next Steps
 - Set up CLI tools
--- fzf, bat, etc.
+-- fzf, bat, etc. (DONE)
 - Tmux configuration for terminal-based workflow
 -- Then of course I have to style it
 - Configure fish

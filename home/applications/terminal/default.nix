@@ -6,6 +6,7 @@
     ./tmux
     ./lazygit
     ./eza
+    ./zoxide
   ];
   home.packages = with pkgs; [
     # Utilities

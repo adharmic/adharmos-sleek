@@ -4,7 +4,10 @@
   # TODO: Extract bat theme into separate bat config.
   programs.fish.shellInit = ''
     set -Ux BAT_THEME 'ansi'
+    set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
+    set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
     fzf --fish | source
+    zoxide init fish | source
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
   '';
   programs.fish.shellAbbrs = {
