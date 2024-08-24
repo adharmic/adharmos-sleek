@@ -10,6 +10,7 @@
         style = "Mono";
       };
       font.size = 16;
+      env.TERM = "xterm-256color";
     };
   };
 }

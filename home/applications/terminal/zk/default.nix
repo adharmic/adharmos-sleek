@@ -37,12 +37,13 @@
     tool = {
       editor = "${config.globalConfig.editor}";
       shell = "${config.globalConfig.shell}";
-      fzf-preview = "bat -p --color always {-i}";
+      fzf-preview = "bat -p --color always {-1}";
     };
 
     filter = {};
 
     alias = {
+      n = "zk new";
       edlast = "zk edit --limit 1 --sort modified- $@";
 
       recent = "zk edit --sort created- --created-after 'last two weeks' --interactive";

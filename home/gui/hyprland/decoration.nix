@@ -1,14 +1,9 @@
-{
-  ...
-}
-:
-{
-  wayland.windowManager.hyprland.settings.decoration =
-  {
+{...}
+: {
+  wayland.windowManager.hyprland.settings.decoration = {
     rounding = 10;
 
-    blur = 
-    {
+    blur = {
       enabled = true;
       size = 16;
       passes = 2;
@@ -19,13 +14,12 @@
 
     active_opacity = 0.90;
     inactive_opacity = 0.75;
+    fullscreen_opacity = 0.75;
 
     drop_shadow = "yes";
     # dim_inactive = true;
   };
-  wayland.windowManager.hyprland.settings.blurls =
-  [
+  wayland.windowManager.hyprland.settings.blurls = [
     "waybar"
   ];
 }
-  

@@ -1,0 +1,14 @@
+"ui.background" = "manowar"
+"ui.selection" = { fg = "manowar", bg = "sailcloth" }
+"ui.text" = "sailcloth"
+"ui.cursor" = { fg = "manowar", bg = "hightide"}
+"ui.cursorline.primary" = { fg = "sailcloth", bg = "pacific"}
+"ui.statusline" = { fg = "sailcloth", bg = "coral"}
+"ui.statusline.insert" = { fg = "sailcloth", bg = "cerulean"}
+[palette]
+manowar = "#061822"
+pacific = "#265b75"
+cerulean = "#0bc7e3"
+coral = "#db662d"
+hightide = "#feaf3c"
+sailcloth = "#ffe9d7"

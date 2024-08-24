@@ -8,7 +8,7 @@
       type = lib.types.submodule {
         options = {
           colorschemePath = lib.mkOption {
-            type = lib.types.str;
+            type = lib.types.path;
             default = "~/.config/colorschemes/cshell";
             description = "Path to the directory of the required system colorscheme";
           };
@@ -24,7 +24,7 @@
             description = "Preferred terminal emulator bin path";
           };
           wallsPath = lib.mkOption {
-            type = lib.types.str;
+            type = lib.types.path;
             default = "~/pictures/wallpapers";
             description = "Path to the wallpaper directory";
           };
@@ -39,9 +39,9 @@
   };
 
   config = {
-    globalConfig.colorschemePath = "~/.config/colorschemes/cshell";
+    globalConfig.colorschemePath = /home/adi/.config/colorschemes/cshell;
     globalConfig.termEmulator = "alacritty";
-    globalConfig.wallsPath = "~/pictures/wallpapers";
+    globalConfig.wallsPath = /home/adi/pictures/wallpapers;
     globalConfig.shell = "fish";
     globalConfig.editor = "hx";
   };

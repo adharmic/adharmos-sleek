@@ -39,6 +39,9 @@
     "$mod, M, moveactive, exact 55% 60%"
     "$mod, M, moveactive, -10 -10"
 
+    # TOGGLE WAYBAR
+    "$mod SHIFT, X, exec, pkill -SIGUSR1 waybar"
+
     # TODO: Set up screenshot shortcut
     # APPLICATION SHORTCUTS
     "$mod, F, exec, firefox"
