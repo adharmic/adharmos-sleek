@@ -1,4 +1,4 @@
-{...}
+{config, ...}
 : {
   programs.fish.enable = true;
   # TODO: Extract bat theme into separate bat config.
@@ -17,6 +17,7 @@
     os = "cd ~/projects/adharmos";
     lg = "lazygit";
     lst = "eza --tree --level=2";
+    vh = "${config.globalConfig.editor} .";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";
