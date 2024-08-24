@@ -162,7 +162,6 @@ disabled = false
 
 [character]
 disabled = false
-style = "bg:color_orange fg:color_fg0"
 success_symbol = '[╰─](bold fg:color_yellow)[](bold fg:color_aqua)[ ](bold fg:color_fg0 bg:color_aqua)[](fg:color_aqua)'
 error_symbol = '[╰─](bold fg:color_yellow)[](bold fg:color_orange)[ ](bold fg:color_fg0 bg:color_orange)[](fg:color_orange)'
 vimcmd_symbol = '[](bold fg:color_green)'

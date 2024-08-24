@@ -35,8 +35,8 @@
     };
 
     tool = {
-      editor = "hx";
-      shell = "${config.globalConfig.shellPath}";
+      editor = "${config.globalConfig.editor}";
+      shell = "${config.globalConfig.shell}";
       fzf-preview = "bat -p --color always {-i}";
     };
 
