@@ -7,7 +7,7 @@
   services.keyd.keyboards.default.ids = ["0001:0001"];
   services.keyd.keyboards.default.settings = {
     main = {
-      capslock = "leftcontrol";
+      capslock = "overload(control, esc)";
       leftalt = "layer(leftalt)";
       rightalt = "leftmeta";
       leftcontrol = "leftalt";

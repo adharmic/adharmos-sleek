@@ -8,6 +8,7 @@
     ./eza
     ./zoxide
     ./btop
+    ./zk # For notetaking
   ];
   home.packages = with pkgs; [
     # Utilities
