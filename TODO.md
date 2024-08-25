@@ -1,9 +1,8 @@
 # Next Steps
-- Set up CLI tools
+- Set up CLI tools (DONE)
 -- fzf, bat, etc. (DONE)
 - Tmux configuration for terminal-based workflow
 -- Then of course I have to style it
-- Configure fish
 - General config file organization and cleanup
 - Documentation
 - Test install on another machine
@@ -14,6 +13,7 @@
 - neomutt setup for e-mail
 - Organize modules by purpose (programming, writing, etc.)
 - Style rofi
+- Create Helix colorscheme (use Bogster as reference)
 
 # In the future
 - Add more colorschemes

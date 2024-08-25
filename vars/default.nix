@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   options = {
     globalConfig = lib.mkOption {
       type = lib.types.submodule {
@@ -32,6 +28,11 @@
             type = lib.types.str;
             default = "~/.nix-profile/bin/fish";
             description = "Path to your prepferred shell";
+          };
+          username = lib.mkOption {
+            type = lib.types.str;
+            default = "adi";
+            description = "Username used for metadata";
           };
         };
       };

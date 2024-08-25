@@ -55,9 +55,10 @@
 
     # SPECIAL WORKSPACES
     "$mod, BRACKETLEFT, togglespecialworkspace, pocket-term"
-    "$mod SHIFT, COMMA, movetoworkspace, special:notes"
-    "$mod, PERIOD, togglespecialworkspace, reference"
-    "$mod SHIFT, PERIOD, movetoworkspace, special:reference"
+    "$mod SHIFT, BRACKETLEFT, movetoworkspace, special:pocket-term"
+    # "$mod CONTROL, BRACKETLEFT, workspace, special:pocket-term"
+    "$mod, BRACKETRIGHT, togglespecialworkspace, notes"
+    "$mod SHIFT, BRACKETRIGHT, movetoworkspace, special:notes"
 
     # WINDOW MANAGEMENT
     "$mod, X, killactive"
@@ -93,6 +94,8 @@
     # WORKSPACE MANAGEMENT
     # - Focus workspace
     "$mod, 1, workspace, 1"
+    "$mod, 1, fullscreen, 0"
+    "$mod, 1, exec, pkill -SIGUSR1 waybar"
     "$mod, 2, workspace, 2"
     "$mod, 3, workspace, 3"
     "$mod, 4, workspace, 4"

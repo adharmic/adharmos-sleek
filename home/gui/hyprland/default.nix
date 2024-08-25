@@ -27,6 +27,6 @@
     ./env.nix
     ./monitor.nix
     ./theme.nix
-    ./workspaces.nix
+    ./workspaces
   ];
 }

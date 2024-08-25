@@ -9,6 +9,7 @@
     ./zoxide
     ./btop
     ./zk # For notetaking
+    ./fd # Better find
   ];
   home.packages = with pkgs; [
     # Utilities

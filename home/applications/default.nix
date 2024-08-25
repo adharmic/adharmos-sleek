@@ -28,5 +28,6 @@
     spotify
     neomutt
     thunderbird
+    freecad
   ];
 }
