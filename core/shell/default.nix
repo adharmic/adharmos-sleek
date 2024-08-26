@@ -3,12 +3,16 @@
   programs.fish.enable = true;
   # TODO: Extract bat theme into separate bat config.
   programs.fish.shellInit = ''
+    # Environment variables
     set -Ux BAT_THEME 'ansi'
     set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
     set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
     set -Ux NIX_CONF '/home/adi/projects/adharmos'
     set -Ux USER_EDITOR 'hx'
     set -Ux MAIN_VAULT 'satyaloka'
+
+    # App initializers
+    eval (tmuxifier init - fish)
     fzf --fish | source
     zoxide init fish | source
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
@@ -23,6 +27,7 @@
     zke = "zk edit --interactive";
     os = "cd $NIX_CONF && $USER_EDITOR .";
     fb = "cd ~/vaults/$MAIN_VAULT && zk edit --interactive";
+    mux = "tmuxifier";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

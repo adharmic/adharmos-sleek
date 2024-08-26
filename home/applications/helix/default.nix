@@ -28,6 +28,13 @@
           };
           auto-format = true;
         }
+        {
+          name = "c";
+          formatter = {
+            command = "clang-format";
+          };
+          auto-format = true;
+        }
       ];
     };
   };

@@ -29,5 +29,7 @@
     neomutt
     thunderbird
     freecad
+    glow
+    bambu-studio
   ];
 }
