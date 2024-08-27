@@ -3,7 +3,7 @@
   programs.waybar.settings = [
     {
       reload_style_on_change = true;
-      layer = "bottom";
+      layer = "top";
       position = "top";
       modules-center = ["hyprland/workspaces"];
       modules-left = [
