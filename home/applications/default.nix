@@ -31,5 +31,6 @@
     freecad
     glow
     bambu-studio
+    hugo
   ];
 }

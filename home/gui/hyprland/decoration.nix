@@ -14,7 +14,6 @@
 
     active_opacity = 0.90;
     inactive_opacity = 0.75;
-    fullscreen_opacity = 0.75;
 
     drop_shadow = "yes";
     # dim_inactive = true;

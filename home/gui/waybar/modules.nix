@@ -72,7 +72,7 @@
         ];
         format-ethernet = " {bandwidthDownOctets}";
         format-wifi = "{icon} {signalStrength}%";
-        format-disconnected = "󰤮";
+        format-disconnected = "󰤮 ";
         tooltip = false;
         on-click = "sleep 0.1 && alacritty -e nmtui";
       };
