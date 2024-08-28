@@ -5,5 +5,6 @@
     nodePackages.typescript-language-server
     clang
     clang-tools
+    vscode-langservers-extracted
   ];
 }

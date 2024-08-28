@@ -27,6 +27,9 @@
     os = "cd $NIX_CONF && ${config.globalConfig.editor} .";
     fb = "cd ~/vaults/$MAIN_VAULT && zk edit --interactive";
     mux = "tmuxinator";
+    osconf = "tmuxinator s osconf";
+    coding = "tmuxinator s coding";
+    satya = "tmuxinator s satya";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

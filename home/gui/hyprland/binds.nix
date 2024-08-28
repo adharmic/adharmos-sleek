@@ -48,7 +48,7 @@
     "$mod, RETURN, exec, ${config.globalConfig.termEmulator}"
     "$mod, R, exec, rofi -show drun"
     "$mod, U, exec, obsidian"
-    "$mod, E, exec, ${config.globalConfig.termEmulator} -e nnn"
+    "$mod, E, exec, ${config.globalConfig.termEmulator} -e broot"
     "CONTROL SHIFT, 4, exec, grim -g \"$(slurp)\" - | wl-copy"
     "$mod, T, exec, ${config.globalConfig.termEmulator} -e hx"
     "$mod, Escape, exec, ${config.globalConfig.termEmulator} -e btop"
@@ -95,8 +95,6 @@
     # WORKSPACE MANAGEMENT
     # - Focus workspace
     "$mod, 1, workspace, 1"
-    "$mod, 1, fullscreen, 0"
-    "$mod, 1, exec, pkill -SIGUSR1 waybar"
     "$mod, 2, workspace, 2"
     "$mod, 3, workspace, 3"
     "$mod, 4, workspace, 4"

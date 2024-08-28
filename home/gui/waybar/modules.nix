@@ -102,6 +102,7 @@
         on-click = "sleep 0.1 && hyprctl dispatch -- exec [float] alacritty -e pulsemixer";
       };
       "mpris" = {
+        hide-empty-text = false;
         max-length = 22;
         format = "{player_icon} {dynamic}";
         format-paused = "{status_icon} <i>{dynamic}</i>";
@@ -113,7 +114,7 @@
           paused = "⏸";
         };
         rewrite = {
-          " " = "nothing is playing";
+          "" = "Nothing is playing";
         };
         # ignored-players: ["firefox"]
       };

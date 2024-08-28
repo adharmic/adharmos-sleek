@@ -35,6 +35,13 @@
           };
           auto-format = true;
         }
+        {
+          name = "html";
+          formatter = {
+            command = "prettierd";
+          };
+          auto-format = true;
+        }
       ];
     };
   };

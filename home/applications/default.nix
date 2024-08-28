@@ -33,5 +33,6 @@
     bambu-studio
     hugo
     wev
+    openpomodoro-cli
   ];
 }

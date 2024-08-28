@@ -1,5 +1,5 @@
 {...}: {
   wayland.windowManager.hyprland.settings.workspace = [
-    "1, name:coding, on-created-empty: hyprctl dispatch exec -- alacritty -e tmuxinator s osconf"
+    "1, name:coding, on-created-empty: [fullscreen] alacritty --working-directory projects -e tmuxinator s coding"
   ];
 }
