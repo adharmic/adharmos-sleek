@@ -8,11 +8,10 @@
     set -Ux FZF_CTRL_T_OPTS "--preview 'bat -n --color=always --line-range :500 {}'"
     set -Ux FZF_ALT_C_OPTS "--preview 'eza --tree --color=always {} | head -200'"
     set -Ux NIX_CONF '/home/adi/projects/adharmos'
-    set -Ux USER_EDITOR 'hx'
+    set -Ux EDITOR 'hx'
     set -Ux MAIN_VAULT 'satyaloka'
 
     # App initializers
-    eval (tmuxifier init - fish)
     fzf --fish | source
     zoxide init fish | source
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
@@ -25,9 +24,9 @@
     lst = "eza --tree --level=2";
     vh = "${config.globalConfig.editor} .";
     zke = "zk edit --interactive";
-    os = "cd $NIX_CONF && $USER_EDITOR .";
+    os = "cd $NIX_CONF && ${config.globalConfig.editor} .";
     fb = "cd ~/vaults/$MAIN_VAULT && zk edit --interactive";
-    mux = "tmuxifier";
+    mux = "tmuxinator";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

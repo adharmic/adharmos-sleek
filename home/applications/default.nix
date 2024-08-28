@@ -32,5 +32,6 @@
     glow
     bambu-studio
     hugo
+    wev
   ];
 }

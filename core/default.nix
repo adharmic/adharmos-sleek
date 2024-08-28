@@ -59,8 +59,8 @@
   # For connecting to the Internet.
   networking.networkmanager.enable = true;
 
-  # Set vim as the default editor.
-  environment.variables.EDITOR = "vim";
+  # Set helix as the default editor.
+  environment.variables.EDITOR = "hx";
 
   system.stateVersion = "24.05";
 }
