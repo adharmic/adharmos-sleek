@@ -38,7 +38,7 @@
         {
           name = "html";
           formatter = {
-            command = "prettierd";
+            command = "prettier";
           };
           auto-format = true;
         }

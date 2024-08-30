@@ -10,6 +10,7 @@
     set -Ux NIX_CONF '/home/adi/projects/adharmos'
     set -Ux EDITOR 'hx'
     set -Ux MAIN_VAULT 'satyaloka'
+    set PATH $PATH ~/.cargo/bin
 
     # App initializers
     fzf --fish | source
@@ -27,9 +28,8 @@
     os = "cd $NIX_CONF && ${config.globalConfig.editor} .";
     fb = "cd ~/vaults/$MAIN_VAULT && zk edit --interactive";
     mux = "tmuxinator";
-    osconf = "tmuxinator s osconf";
-    coding = "tmuxinator s coding";
-    satya = "tmuxinator s satya";
+    tx = "tmux";
+    lr = "tmuxinator s learn-rust";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

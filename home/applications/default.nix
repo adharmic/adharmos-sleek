@@ -27,12 +27,12 @@
     bat
     spotify
     neomutt
-    thunderbird
     freecad
     glow
     bambu-studio
     hugo
     wev
     openpomodoro-cli
+    thunderbird
   ];
 }

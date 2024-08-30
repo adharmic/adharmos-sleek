@@ -1,6 +1,6 @@
 {pkgs, ...}
 : {
   home.packages = with pkgs; [
-    broot # Terminal file explorer
+    ranger # Terminal file explorer
   ];
 }
