@@ -6,5 +6,6 @@
     clang
     clang-tools
     vscode-langservers-extracted
+    markdown-oxide
   ];
 }

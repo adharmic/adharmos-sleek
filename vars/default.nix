@@ -34,6 +34,11 @@
             default = "adi";
             description = "Username used for metadata";
           };
+          hostname = lib.mkOption {
+            type = lib.types.str;
+            default = "indranet";
+            description = "Host name of the system";
+          };
         };
       };
     };
@@ -45,5 +50,6 @@
     globalConfig.wallsPath = /home/adi/pictures/wallpapers;
     globalConfig.shell = "fish";
     globalConfig.editor = "hx";
+    globalConfig.hostname = "indranet";
   };
 }

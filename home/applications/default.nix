@@ -34,5 +34,7 @@
     wev
     openpomodoro-cli
     thunderbird
+    qbittorrent
+    openvpn
   ];
 }

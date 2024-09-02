@@ -8,11 +8,10 @@
   services.keyd.keyboards.default.settings = {
     main = {
       capslock = "overload(control, esc)";
-      leftalt = "layer(leftalt)";
+      leftalt = "layer(util)";
       rightalt = "leftmeta";
-      leftcontrol = "leftalt";
     };
-    leftalt = {
+    "util:A" = {
       h = "left";
       j = "down";
       k = "up";

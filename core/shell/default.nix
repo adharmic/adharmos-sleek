@@ -16,6 +16,10 @@
     fzf --fish | source
     zoxide init fish | source
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
+    if set -q ZELLIJ
+    else
+      zellij
+    end
   '';
   programs.fish.shellAbbrs = {
     # TODO: Replace with global variable to config path
@@ -30,6 +34,7 @@
     mux = "tmuxinator";
     tx = "tmux";
     lr = "tmuxinator s learn-rust";
+    wifi = "sudo nmtui";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

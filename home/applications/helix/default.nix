@@ -12,6 +12,7 @@
       theme = "bogster";
       editor.color-modes = true;
       editor.cursorline = true;
+      editor.soft-wrap.enable = true;
     };
     languages = {
       # the language-server option currently requires helix from the master branch at https://github.com/helix-editor/helix/
@@ -39,6 +40,13 @@
           name = "html";
           formatter = {
             command = "prettier";
+          };
+          auto-format = true;
+        }
+        {
+          name = "rust";
+          formatter = {
+            command = "rustfmt";
           };
           auto-format = true;
         }
