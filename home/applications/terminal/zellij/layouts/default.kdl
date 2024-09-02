@@ -4,14 +4,14 @@ layout {
         plugin location="file:/home/adi/.bins/zjstatus" {
             hide_frame_for_single_pane "true"
 
-            format_left  "{mode}#[fg=#DB662D,bg=#FEAF3C,bold]#[fg=#1d485f,bg=#FEAf3C] {session}#[bg=#DB662D]#[fg=#FEAf3C,bg=#061923] {tabs}"
+            format_left  "{mode}#[fg=#DB662D,bg=#FEAF3C,bold]#[fg=#1d485f,bg=#FEAf3C,bold] {session}#[bg=#DB662D]#[fg=#FEAf3C,bg=#061923] {tabs}"
             format_right "#[fg=#FEAF3C,bg=#061923]{command_kubectx}#[fg=#1d485f,bg=#FEAF3C]::{command_kubens}{datetime}"
             format_space "#[bg=#061923]"
 
             mode_normal          "#[fg=#FFE9D7,bg=#db662d,bold] zj"
 
-            tab_normal               "#[fg=#FEDAAE,bg=#061923] #[fg=#1d485f,bg=#FEDAAE]  {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE,bg=#061923]"
-            tab_active               "#[fg=#008eab,bg=#061923,bold,italic] #[fg=#008eab,bg=#1d485f] #[fg=#FEDAEE,bg=#1d485f,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1d485f,bg=#061923]"
+            tab_normal               "#[fg=#1D485F,bg=#061923] #[fg=#FEDAAE,bg=#1D485F]  {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1D485F,bg=#061923]"
+            tab_active               "#[fg=#008eab,bg=#061923,bold,italic] #[fg=#008eab,bg=#FEDAAE] #[fg=#1D485F,bg=#FEDAAE,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE,bg=#061923]"
             tab_fullscreen_indicator "󰊓 "
             tab_sync_indicator       "  "
             tab_floating_indicator   "󰉈 "
