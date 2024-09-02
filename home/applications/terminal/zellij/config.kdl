@@ -2,7 +2,7 @@ themes {
    default {
         fg "#fedaae"
         bg "#061822"
-        black "#061923"
+        black "#000000"
         red "#061822"
         green "#008eab"
         yellow "#feaf3c"
@@ -13,3 +13,35 @@ themes {
         orange "#feaf3c"
     }
 }
+
+ui {
+    pane_frames {
+        rounded_corners true
+    }
+}
+
+keybinds clear-defaults=true {
+    // keybinds are divided into modes
+    normal {
+        // bind instructions can include one or more keys (both keys will be bound separately)
+        // bind keys can include one or more actions (all actions will be performed with no sequential guarantees)
+        bind "Alt a" { MoveFocus "Left"; }
+        bind "Alt s" { MoveFocus "Down"; }
+        bind "Alt w" { MoveFocus "Up"; }
+        bind "Alt d" { MoveFocus "Right"; }
+        bind "Alt o" { NewPane; }
+        bind "Alt z" { Detach; }
+        bind "Alt q" { CloseFocus; }
+        bind "Alt n" { GoToNextTab; }
+        bind "Alt p" { GoToPreviousTab; }
+        bind "Alt t" { NewTab; }
+        bind "Alt =" { Resize "Increase"; }
+        bind "Alt -" { Resize "Decrease"; }
+        bind "Alt f" { ToggleFocusFullscreen; }
+        bind "Alt v" { ToggleFloatingPanes; }
+        bind "Alt [" { PreviousSwapLayout; }
+        bind "Alt ]" { NextSwapLayout; }
+    }
+}
+
+

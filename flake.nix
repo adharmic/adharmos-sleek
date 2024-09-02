@@ -14,6 +14,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     helix.url = "github:helix-editor/helix/master";
+    zjstatus.url = "github:dj95/zjstatus";
   };
 
   # Outputs are the returned values from this flake.
@@ -21,10 +22,24 @@
     self,
     nixpkgs,
     home-manager,
+    zjstatus,
     ...
   } @ inputs
   : let
     inherit (self) outputs;
+
+    overlays = [
+      (final: prev: {
+        zjstatus = zjstatus.packages.${prev.system}.default;
+      })
+    ];
+
+    mkPkgs = system:
+      import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+        overlays = overlays;
+      };
   in {
     nixosConfigurations.adharmos =
       nixpkgs.lib.nixosSystem
@@ -33,6 +48,7 @@
         specialArgs = {
           # Pass the inputs to all submodules.
           inherit inputs;
+          pkgs = mkPkgs "x86_64-linux";
         };
         modules = [
           # This file contains only the bare minimum settings required for NixOS to run.
@@ -49,7 +65,7 @@
     homeConfigurations."adi@adharmos" =
       home-manager.lib.homeManagerConfiguration
       {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        pkgs = mkPkgs "x86_64-linux";
         extraSpecialArgs = {
           inherit inputs outputs;
         };

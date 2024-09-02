@@ -36,5 +36,8 @@
     thunderbird
     qbittorrent
     openvpn
+    emacs
+    zotero
+    mendeley
   ];
 }

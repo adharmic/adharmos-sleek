@@ -10,6 +10,7 @@
       capslock = "overload(control, esc)";
       leftalt = "layer(util)";
       rightalt = "leftmeta";
+      rightcontrol = "rightalt";
     };
     "util:A" = {
       h = "left";
