@@ -31,6 +31,10 @@ keybinds clear-defaults=true {
         bind "Alt s" { MoveFocus "Down"; }
         bind "Alt w" { MoveFocus "Up"; }
         bind "Alt d" { MoveFocus "Right"; }
+        bind "Alt ," { MovePane "Left"; }
+        bind "Alt ." { MovePane "Down"; }
+        bind "Alt l" { MovePane "Up"; }
+        bind "Alt /" { MovePane "Right"; }
         bind "Alt o" { NewPane; }
         bind "Alt z" { Detach; }
         bind "Alt q" { CloseFocus; }
