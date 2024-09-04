@@ -46,6 +46,7 @@
   ];
   fonts.packages = with pkgs; [
     nerdfonts
+    google-fonts
     cascadia-code
   ];
 

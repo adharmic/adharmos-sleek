@@ -22,7 +22,7 @@
     brightnessctl
     playerctl
 
-    obsidian
+    # obsidian
     fzf
     bat
     spotify
@@ -35,5 +35,6 @@
     thunderbird
     qbittorrent
     openvpn
+    fontpreview
   ];
 }
