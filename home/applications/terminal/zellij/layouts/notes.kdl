@@ -1,0 +1,91 @@
+layout {
+    cwd "/home/adi"
+    tab name="Edit" focus=true hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="file:/home/adi/.bins/zjstatus" {
+            command_kubectx_command "kubectx -c"
+            command_kubectx_format "#[fg=#1d485f,bg=#FEAF3C,italic] {stdout}"
+            command_kubectx_interval "2"
+            command_kubens_command "kubens -c"
+            command_kubens_format "#[fg=#1d485f,bg=#FEAF3C]{stdout} "
+            command_kubens_interval "2"
+            datetime "#[fg=#DB662D,bg=#FEAF3C]#[fg=#FFE9D7,bg=#DB662D,bold] {format} "
+            datetime_format "%A, %d %b %Y %H:%M"
+            datetime_timezone "America/Chicago"
+            format_left "{mode}#[fg=#DB662D,bg=#FEAF3C,bold]#[fg=#1d485f,bg=#FEAf3C,bold] {session}#[bg=#DB662D]#[fg=#FEAf3C,bg=#061923] {tabs}"
+            format_right "#[fg=#FEAF3C,bg=#061923]{command_kubectx}#[fg=#1d485f,bg=#FEAF3C]::{command_kubens}{datetime}"
+            format_space "#[bg=#061923]"
+            hide_frame_for_single_pane "true"
+            mode_normal "#[fg=#FFE9D7,bg=#db662d,bold] zj"
+            tab_active "#[fg=#008eab,bg=#061923,bold,italic] #[fg=#008eab,bg=#FEDAAE] #[fg=#1D485F,bg=#FEDAAE,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE,bg=#061923]"
+            tab_floating_indicator "󰉈 "
+            tab_fullscreen_indicator "󰊓 "
+            tab_normal "#[fg=#1D485F,bg=#061923] #[fg=#FEDAAE,bg=#1D485F]  {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1D485F,bg=#061923]"
+            tab_sync_indicator "  "
+            }
+        }
+        pane split_direction="vertical" {
+            pane cwd=".nb/home" size="30%" name="notebook cli"
+            pane command="ranger" cwd=".nb/home" size="70%" name="editor" {
+                start_suspended false
+            }
+        }
+    }
+    tab name="Browse" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="file:/home/adi/.bins/zjstatus" {
+            command_kubectx_command "kubectx -c"
+            command_kubectx_format "#[fg=#1d485f,bg=#FEAF3C,italic] {stdout}"
+            command_kubectx_interval "2"
+            command_kubens_command "kubens -c"
+            command_kubens_format "#[fg=#1d485f,bg=#FEAF3C]{stdout} "
+            command_kubens_interval "2"
+            datetime "#[fg=#DB662D,bg=#FEAF3C]#[fg=#FFE9D7,bg=#DB662D,bold] {format} "
+            datetime_format "%A, %d %b %Y %H:%M"
+            datetime_timezone "America/Chicago"
+            format_left "{mode}#[fg=#DB662D,bg=#FEAF3C,bold]#[fg=#1d485f,bg=#FEAf3C,bold] {session}#[bg=#DB662D]#[fg=#FEAf3C,bg=#061923] {tabs}"
+            format_right "#[fg=#FEAF3C,bg=#061923]{command_kubectx}#[fg=#1d485f,bg=#FEAF3C]::{command_kubens}{datetime}"
+            format_space "#[bg=#061923]"
+            hide_frame_for_single_pane "true"
+            mode_normal "#[fg=#FFE9D7,bg=#db662d,bold] zj"
+            tab_active "#[fg=#008eab,bg=#061923,bold,italic] #[fg=#008eab,bg=#FEDAAE] #[fg=#1D485F,bg=#FEDAAE,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE,bg=#061923]"
+            tab_floating_indicator "󰉈 "
+            tab_fullscreen_indicator "󰊓 "
+            tab_normal "#[fg=#1D485F,bg=#061923] #[fg=#FEDAAE,bg=#1D485F]  {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1D485F,bg=#061923]"
+            tab_sync_indicator "  "
+            }
+        }
+        pane command="nb" cwd="projects/adharmos" {
+            args "b"
+            start_suspended false
+        }
+    }
+    new_tab_template {
+        pane size=1 borderless=true {
+            plugin location="file:/home/adi/.bins/zjstatus" {
+            command_kubectx_command "kubectx -c"
+            command_kubectx_format "#[fg=#1d485f,bg=#FEAF3C,italic] {stdout}"
+            command_kubectx_interval "2"
+            command_kubens_command "kubens -c"
+            command_kubens_format "#[fg=#1d485f,bg=#FEAF3C]{stdout} "
+            command_kubens_interval "2"
+            datetime "#[fg=#DB662D,bg=#FEAF3C]#[fg=#FFE9D7,bg=#DB662D,bold] {format} "
+            datetime_format "%A, %d %b %Y %H:%M"
+            datetime_timezone "America/Chicago"
+            format_left "{mode}#[fg=#DB662D,bg=#FEAF3C,bold]#[fg=#1d485f,bg=#FEAf3C,bold] {session}#[bg=#DB662D]#[fg=#FEAf3C,bg=#061923] {tabs}"
+            format_right "#[fg=#FEAF3C,bg=#061923]{command_kubectx}#[fg=#1d485f,bg=#FEAF3C]::{command_kubens}{datetime}"
+            format_space "#[bg=#061923]"
+            hide_frame_for_single_pane "true"
+            mode_normal "#[fg=#FFE9D7,bg=#db662d,bold] zj"
+            tab_active "#[fg=#008eab,bg=#061923,bold,italic] #[fg=#008eab,bg=#FEDAAE] #[fg=#1D485F,bg=#FEDAAE,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE,bg=#061923]"
+            tab_floating_indicator "󰉈 "
+            tab_fullscreen_indicator "󰊓 "
+            tab_normal "#[fg=#1D485F,bg=#061923] #[fg=#FEDAAE,bg=#1D485F]  {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1D485F,bg=#061923]"
+            tab_sync_indicator "  "
+            }
+        }
+        pane split_direction="vertical" {
+            pane
+        }
+    }
+}

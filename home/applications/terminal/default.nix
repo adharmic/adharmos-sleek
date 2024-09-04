@@ -2,8 +2,9 @@
 : {
   imports = [
     ./prompt
-    ./alacritty.nix
+    # ./alacritty.nix
     # ./tmux
+    ./kitty
     ./lazygit
     ./eza
     ./zoxide
@@ -15,5 +16,6 @@
   home.packages = with pkgs; [
     # Utilities
     delta
+    yazi
   ];
 }

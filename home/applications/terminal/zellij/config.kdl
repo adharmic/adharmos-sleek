@@ -2,8 +2,8 @@ themes {
    default {
         fg "#fedaae"
         bg "#061822"
-        black "#000000"
-        red "#061822"
+        black "#061822"
+        red "#dd998a"
         green "#008eab"
         yellow "#feaf3c"
         blue "#0bc7e3"
@@ -13,6 +13,8 @@ themes {
         orange "#feaf3c"
     }
 }
+
+default_layout "general"
 
 ui {
     pane_frames {

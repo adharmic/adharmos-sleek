@@ -18,7 +18,7 @@
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
     if set -q ZELLIJ
     else
-      zellij
+      zellij -l welcome
     end
   '';
   programs.fish.shellAbbrs = {
@@ -31,10 +31,12 @@
     zke = "zk edit --interactive";
     os = "cd $NIX_CONF && ${config.globalConfig.editor} .";
     fb = "cd ~/vaults/$MAIN_VAULT && zk edit --interactive";
-    mux = "tmuxinator";
-    tx = "tmux";
-    lr = "tmuxinator s learn-rust";
     wifi = "sudo nmtui";
+    zj = "zellij";
+    zjrt = "zellij action rename-tab";
+    zjrp = "zellij action rename-pane";
+    zjr = "zellij action rename-session";
+    nd = "nix develop --command fish";
   };
   programs.fish.shellAliases = {
     ls = "eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions";

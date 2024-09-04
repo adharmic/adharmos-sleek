@@ -4,6 +4,7 @@ format = """
 [╭─](color_yellow)[](color_orange)\
 $os\
 $username\
+${custom.nix_develop}\
 [](bg:color_yellow fg:color_orange)\
 $directory\
 [](fg:color_yellow bg:color_aqua)\
@@ -168,3 +169,13 @@ vimcmd_symbol = '[](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
 vimcmd_replace_symbol = '[](bold fg:color_purple)'
 vimcmd_visual_symbol = '[](bold fg:color_yellow)'
+
+[custom.nix_develop]
+command = """
+fish -c 'if test "$IN_NIX_SHELL" = "impure"
+  echo "nix-develop"
+end'
+"""
+when = "test -n \"$IN_NIX_SHELL\""
+style = "bg:color_orange fg:color_fg0"
+format = "[via]($style)[ $output]($style bold)"

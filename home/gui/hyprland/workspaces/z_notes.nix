@@ -1,5 +1,5 @@
 {...}: {
   wayland.windowManager.hyprland.settings.workspace = [
-    "special:notes, on-created-empty: [fullscreen] obsidian"
+    "special:notes, on-created-empty: [fullscreen] kitty"
   ];
 }

@@ -1,4 +1,4 @@
-{...}
+{config, ...}
 : {
   programs.waybar.settings = [
     {
@@ -74,7 +74,7 @@
         format-wifi = "{icon} {signalStrength}%";
         format-disconnected = "󰤮 ";
         tooltip = false;
-        on-click = "sleep 0.1 && alacritty -e nmtui";
+        on-click = "sleep 0.1 && ${config.globalConfig.termEmulator} nmtui";
       };
       "tray" = {
         spacing = 12;
@@ -99,7 +99,7 @@
             ""
           ];
         };
-        on-click = "sleep 0.1 && hyprctl dispatch -- exec [float] alacritty -e pulsemixer";
+        on-click = "sleep 0.1 && hyprctl dispatch -- exec [float] ${config.globalConfig.termEmulator} pulsemixer";
       };
       "mpris" = {
         hide-empty-text = false;

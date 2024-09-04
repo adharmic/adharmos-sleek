@@ -1,0 +1,39 @@
+// 
+layout {
+    pane size=1 borderless=true {
+        plugin location="file:/home/adi/.bins/zjstatus" {
+
+            format_left  "#[fg=#FEAF3C]#[fg=#FEAF3C,bg=#DB662D] {mode}#[fg=#DB662D,bg=#FEAF3C] #[fg=#1d485f,bg=#FEAf3C,bold]{session}#[bg=#DB662D]#[fg=#FEAf3C] {tabs}"
+            format_right "#[fg=#FEAF3C]{command_kubectx}#[fg=#1d485f,bg=#FEAF3C]::{command_kubens}{datetime}"
+            format_space ""
+
+            mode_normal "#[fg=#FFE9D7,bg=#db662d,bold]  zj "
+
+            tab_normal "#[fg=#1D485F] #[fg=#FEDAAE,bg=#1D485F]󰖔 {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#1D485F]"
+            tab_active               "#[fg=#FEDAAE,bold,italic] #[fg=#1D485F,bg=#FEDAAE]󰖙 #[fg=#1D485F,bg=#FEDAAE,bold,italic]{name} {fullscreen_indicator}{sync_indicator}{floating_indicator}#[fg=#FEDAAE]"
+            tab_fullscreen_indicator "󰊓 "
+            tab_sync_indicator       "  "
+            tab_floating_indicator   "󰉈 "
+
+            command_kubectx_command  "kubectx -c"
+            command_kubectx_format   "#[fg=#1d485f,bg=#FEAF3C,italic] {stdout}"
+            command_kubectx_interval "2"
+
+            command_kubens_command  "kubens -c"
+            command_kubens_format   "#[fg=#1d485f,bg=#FEAF3C]{stdout} "
+            command_kubens_interval "2"
+
+            datetime          "#[fg=#FEAF3C,bg=#DB662D] #[fg=#FFE9D7,bg=#DB662D,bold]{format} #[fg=#DB662D,bg=#FEAF3C] #[fg=#FEAF3C]"
+            datetime_format   "%A, %d %b %Y %H:%M"
+            datetime_timezone "America/Chicago"
+
+            border_enabled "false"
+            border_char "═"
+            border_format "#[fg=#008EAB]{char}"
+            border_position "bottom"
+        }
+    }
+    pane split_direction="vertical" {
+        pane
+    }
+}

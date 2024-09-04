@@ -32,12 +32,8 @@
     bambu-studio
     hugo
     wev
-    openpomodoro-cli
     thunderbird
     qbittorrent
     openvpn
-    emacs
-    zotero
-    mendeley
   ];
 }

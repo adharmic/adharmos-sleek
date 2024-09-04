@@ -18,7 +18,7 @@
   # BINDINGS
   wayland.windowManager.hyprland.settings.bind = [
     # Pulsemixer
-    "$mod SHIFT, U, exec, [float] alacritty -e pulsemixer"
+    "$mod SHIFT, U, exec, [float] ${config.globalConfig.termEmulator} pulsemixer"
     # Picture-in-Picture
     "$mod, Q, setfloating, "
     "$mod, Q, resizeactive, exact 45% 40%"
@@ -59,7 +59,8 @@
     # "$mod CONTROL, BRACKETLEFT, workspace, special:pocket-term"
     "$mod, BRACKETRIGHT, togglespecialworkspace, notes"
     "$mod SHIFT, BRACKETRIGHT, movetoworkspace, special:notes"
-    "$mod, SLASH, togglespecialworkspace, dashboard"
+    "$mod, SLASH, togglespecialworkspace, reference"
+    "$mod SHIFT, SLASH, movetoworkspace, special:reference"
 
     # WINDOW MANAGEMENT
     "$mod, X, killactive"

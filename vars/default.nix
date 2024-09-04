@@ -11,7 +11,7 @@
           # TODO: Merge all terminal options into one object option
           termEmulator = lib.mkOption {
             type = lib.types.str;
-            default = "alacritty";
+            default = "kitty";
             description = "Preferred terminal emulator (for shortcuts)";
           };
           editor = lib.mkOption {
@@ -46,7 +46,7 @@
 
   config = {
     globalConfig.colorschemePath = /home/adi/.config/colorschemes/cshell;
-    globalConfig.termEmulator = "alacritty";
+    globalConfig.termEmulator = "kitty";
     globalConfig.wallsPath = /home/adi/pictures/wallpapers;
     globalConfig.shell = "fish";
     globalConfig.editor = "hx";

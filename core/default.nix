@@ -46,6 +46,7 @@
   ];
   fonts.packages = with pkgs; [
     nerdfonts
+    cascadia-code
   ];
 
   # Hyprland for display purposes
