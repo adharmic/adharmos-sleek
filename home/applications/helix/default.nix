@@ -21,6 +21,11 @@
         args = ["lsp"];
       };
 
+      language-server.emmet-lsp = {
+        command = "emmet-language-server";
+        args = ["--stdio"];
+      };
+
       language = [
         {
           name = "nix";
@@ -52,6 +57,22 @@
           scope = "source.md";
           file-types = ["md" "markdown"];
           language-servers = ["zk-lsp"];
+          auto-format = true;
+        }
+        {
+          name = "typescript";
+          language-servers = ["typescript-language-server" "vscode-eslint-language-server" "emmet-lsp"];
+          formatter = {
+            command = "prettier --parser typescript";
+          };
+          auto-format = true;
+        }
+        {
+          name = "tsx";
+          language-servers = ["typescript-language-server" "vscode-eslint-language-server" "emmet-lsp"];
+          formatter = {
+            command = "prettier --parser typescript";
+          };
           auto-format = true;
         }
       ];

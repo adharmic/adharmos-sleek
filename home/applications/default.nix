@@ -35,6 +35,6 @@
     thunderbird
     qbittorrent
     openvpn
-    fontpreview
+    dunst
   ];
 }
