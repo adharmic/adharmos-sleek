@@ -59,8 +59,8 @@
     # "$mod CONTROL, BRACKETLEFT, workspace, special:pocket-term"
     "$mod, BRACKETRIGHT, togglespecialworkspace, notes"
     "$mod SHIFT, BRACKETRIGHT, movetoworkspace, special:notes"
-    "$mod, SLASH, togglespecialworkspace, reference"
-    "$mod SHIFT, SLASH, movetoworkspace, special:reference"
+    "$mod, BACKSLASH, togglespecialworkspace, reference"
+    "$mod SHIFT, BACKSLASH, movetoworkspace, special:reference"
 
     # WINDOW MANAGEMENT
     "$mod, X, killactive"

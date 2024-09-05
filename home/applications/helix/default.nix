@@ -37,13 +37,6 @@
           auto-format = true;
         }
         {
-          name = "html";
-          formatter = {
-            command = "prettier";
-          };
-          auto-format = true;
-        }
-        {
           name = "rust";
           formatter = {
             command = "rustfmt";
@@ -59,20 +52,6 @@
           scope = "source.md";
           file-types = ["md" "markdown"];
           language-servers = ["zk-lsp"];
-          auto-format = true;
-        }
-        {
-          name = "html";
-          formatter = {
-            command = "prettier";
-          };
-          auto-format = true;
-        }
-        {
-          name = "typescript";
-          formatter = {
-            command = "prettier";
-          };
           auto-format = true;
         }
       ];
