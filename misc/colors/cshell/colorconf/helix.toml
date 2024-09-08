@@ -41,7 +41,6 @@
 "diff.delta" = "cshell-orange"
 "diff.minus" = "cshell-lred"
 
-"ui.background" = { bg = "cshell-base1" }
 "ui.linenr" = { fg = "cshell-base4" }
 "ui.linenr.selected" = { fg = "cshell-fg1" }
 "ui.cursorline" = { bg = "cshell-base0" }
