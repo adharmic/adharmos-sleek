@@ -29,7 +29,6 @@
     neomutt
     freecad
     glow
-    bambu-studio
     hugo
     wev
     thunderbird

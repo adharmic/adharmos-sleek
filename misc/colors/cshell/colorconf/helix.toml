@@ -1,14 +1,102 @@
-"ui.background" = "manowar"
-"ui.selection" = { fg = "manowar", bg = "sailcloth" }
-"ui.text" = "sailcloth"
-"ui.cursor" = { fg = "manowar", bg = "hightide"}
-"ui.cursorline.primary" = { fg = "sailcloth", bg = "pacific"}
-"ui.statusline" = { fg = "sailcloth", bg = "coral"}
-"ui.statusline.insert" = { fg = "sailcloth", bg = "cerulean"}
+# Author : Adithya Ajith <adithya@satyaloka.org>
+
+"attribute" = "cshell-orange"
+"keyword" = { fg = "cshell-yellow", modifiers = ["bold"] }
+"keyword.directive" = "cshell-yellow"
+"namespace" = "cshell-red"
+"punctuation" = "cshell-orange"
+"punctuation.delimiter" = "cshell-orange"
+"operator" = { fg = "cshell-orange", modifiers = ["bold"] }
+"special" = "cshell-lgreen"
+"variable.other.member" = "cshell-fg0"
+"variable" = "cshell-fg0"
+"variable.parameter" = "cshell-fg0"
+"type" = "cshell-lred"
+"type.builtin" = { fg = "cshell-red", modifiers = ["bold"] }
+"constructor" = "cshell-lred"
+"function" = "cshell-lblue"
+"function.macro" = { fg = "cshell-orange", modifiers = ["bold"] }
+"function.builtin" = { fg = "cshell-lblue", modifiers = ["bold"] }
+"comment" = "cshell-base5"
+"variable.builtin" = "cshell-fg0"
+"constant" = "cshell-teal"
+"constant.builtin" = "cshell-teal"
+"string" = "cshell-teal"
+"constant.numeric" = "cshell-blue"
+"constant.character.escape" = { fg = "cshell-lgreen", modifiers = ["bold"] }
+"label" = "cshell-blue"
+"module" = "cshell-red"
+
+"markup.heading" = "cshell-blue"
+"markup.list" = "cshell-red"
+"markup.bold" = { fg = "cshell-yellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "cshell-purp", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "cshell-yellow", modifiers = ["underlined"] }
+"markup.link.text" = "cshell-red"
+"markup.quote" = "cshell-teal"
+"markup.raw" = "cshell-lgreen"
+
+"diff.plus" = "cshell-teal"
+"diff.delta" = "cshell-orange"
+"diff.minus" = "cshell-lred"
+
+"ui.background" = { bg = "cshell-base1" }
+"ui.linenr" = { fg = "cshell-base4" }
+"ui.linenr.selected" = { fg = "cshell-fg1" }
+"ui.cursorline" = { bg = "cshell-base0" }
+"ui.statusline" = { fg = "cshell-fg1", bg = "cshell-base2" }
+"ui.statusline.inactive" = { fg = "cshell-fg0", bg = "cshell-base2" }
+"ui.popup" = { bg = "cshell-base2" }
+"ui.window" = { bg = "cshell-base2" }
+"ui.help" = { bg = "cshell-base2", fg = "cshell-fg1" }
+
+"ui.statusline.normal" = { fg = "cshell-base1", bg = "cshell-blue", modifiers = [ "bold" ]}
+"ui.statusline.insert" = { fg = "cshell-base1", bg = "cshell-lgreen", modifiers = [ "bold" ]}
+"ui.statusline.select" = { fg = "cshell-base1", bg = "cshell-red", modifiers = [ "bold" ] }
+
+"ui.text" = { fg = "cshell-fg1" }
+"ui.text.focus" = { fg = "cshell-fg1", modifiers= ["bold"] }
+"ui.virtual.whitespace" = "cshell-base5"
+"ui.virtual.ruler" = { bg = "cshell-base0" }
+
+"ui.selection" = { bg = "cshell-base3" }
+"ui.cursor.match" = { fg = "cshell-base3", bg = "cshell-orange" }
+"ui.cursor" = { fg = "cshell-base5", modifiers = ["reversed"] }
+
+"ui.menu" = { fg = "cshell-fg1", bg = "cshell-base2" }
+"ui.menu.selected" = { bg = "cshell-base3" }
+
+"warning" = "cshell-orange"
+"error" = "cshell-lred"
+"info" = "cshell-teal"
+"hint" = "cshell-blue"
+
+# make diagnostic underlined, to distinguish with selection text.
+"diagnostic.warning" = { underline = { color = "cshell-orange", style = "curl"} }
+"diagnostic.error" = { underline = { color = "cshell-lred", style = "curl"} }
+"diagnostic.info" = { underline = { color = "cshell-teal", style = "curl"} }
+"diagnostic.hint" = { underline = { color = "cshell-blue", style = "curl"} }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
 [palette]
-manowar = "#061822"
-pacific = "#265b75"
-cerulean = "#0bc7e3"
-coral = "#db662d"
-hightide = "#feaf3c"
-sailcloth = "#ffe9d7"
+cshell-yellow = "#feaf3c"
+cshell-lblue = "#77dbf4"
+cshell-teal = "#0bc7e3"
+cshell-blue = "#5fb1c2"
+cshell-orange = "#db662d"
+cshell-red = "#C41E3A"
+cshell-lgreen = "#3A9D23"
+cshell-lred = "#dd998a"
+cshell-purp = "#9B4F96"
+
+cshell-base0 = "#061822"
+cshell-base1 = "#061923" 
+cshell-base2 = "#1d485f"
+cshell-base3 = "#265b75" 
+cshell-base4 = "#545d65" 
+cshell-base5 = "#97b9c0"
+
+cshell-fg0 = "#ffe9d7"
+cshell-fg1 = "#F0EAD6"

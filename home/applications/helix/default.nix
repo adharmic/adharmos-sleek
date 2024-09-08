@@ -9,7 +9,7 @@
     package = inputs.helix.packages."${pkgs.system}".helix;
     defaultEditor = true;
     settings = {
-      theme = "bogster";
+      theme = "systheme";
       editor.color-modes = true;
       editor.cursorline = true;
       editor.soft-wrap.enable = true;
@@ -24,6 +24,18 @@
       language-server.emmet-lsp = {
         command = "emmet-language-server";
         args = ["--stdio"];
+      };
+
+      language-server.vscode-json-language-server.config = {
+        json = {
+          validate = {
+            enable = true;
+          };
+          format = {
+            enable = true;
+          };
+        };
+        provideFormatter = true;
       };
 
       language = [
@@ -72,6 +84,46 @@
           language-servers = ["typescript-language-server" "vscode-eslint-language-server" "emmet-lsp"];
           formatter = {
             command = "prettier --parser typescript";
+          };
+          auto-format = true;
+        }
+        {
+          name = "jsx";
+          language-servers = ["typescript-language-server" "vscode-eslint-language-server" "emmet-lsp"];
+          formatter = {
+            command = "prettier --parser typescript";
+          };
+          auto-format = true;
+        }
+        {
+          name = "javascript";
+          language-servers = ["typescript-language-server" "vscode-eslint-language-server" "emmet-lsp"];
+          formatter = {
+            command = "prettier --parser typescript";
+          };
+          auto-format = true;
+        }
+        {
+          name = "json";
+          language-servers = ["vscode-json-language-server"];
+          formatter = {
+            command = "prettier --parser json";
+          };
+          auto-format = true;
+        }
+        {
+          name = "html";
+          language-servers = ["vscode-html-language-server" "emmet-lsp"];
+          formatter = {
+            command = "prettier --parser html";
+          };
+          auto-format = true;
+        }
+        {
+          name = "css";
+          language-servers = ["vscode-css-language-server"];
+          formatter = {
+            command = "prettier --parser css";
           };
           auto-format = true;
         }
