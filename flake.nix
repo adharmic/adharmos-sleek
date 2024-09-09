@@ -34,6 +34,8 @@
       })
     ];
 
+    hostname = "vivekela";
+
     mkPkgs = system:
       import nixpkgs {
         inherit system;
@@ -41,13 +43,14 @@
         overlays = overlays;
       };
   in {
-    nixosConfigurations.adharmos =
+    nixosConfigurations."${hostname}" =
       nixpkgs.lib.nixosSystem
       {
         system = "x86_64-linux";
         specialArgs = {
           # Pass the inputs to all submodules.
           inherit inputs;
+          inherit hostname;
           pkgs = mkPkgs "x86_64-linux";
         };
         modules = [
@@ -62,7 +65,7 @@
           ./vars
         ];
       };
-    homeConfigurations."adi@adharmos" =
+    homeConfigurations."adi@${hostname}" =
       home-manager.lib.homeManagerConfiguration
       {
         pkgs = mkPkgs "x86_64-linux";

@@ -35,5 +35,8 @@
     qbittorrent
     openvpn
     dunst
+
+    # shell
+    direnv
   ];
 }

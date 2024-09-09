@@ -43,7 +43,7 @@
 3. Generate a hardware-config file via Nix.
 4. Clone this repository via git.
 5. Replace the existing hardware-config file with your own.
-6. `sudo nixos-install --flake .#adharmos` in the repo folder.
+6. `sudo nixos-install --flake .#${hostname}` in the repo folder, where hostname is whatever you configured it to be. 
 7. Before or after rebooting, run `nix-shell -p home-manager`.
-8. Install the home-manager config using `home-manager switch --flake .#adi@adharmos`
+8. Install the home-manager config using `home-manager switch --flake .#user@${hostname}` where user and hostname are whatever you configured them to be.
 9. Adjust the configuration to match your needs!

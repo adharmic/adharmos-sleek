@@ -1,12 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}:
-# let
-#   currDir = "projects/adharmOS/modules/opsys/applications/home/waybar/";
-# in
-{
+{pkgs, ...}: {
   # Configure & Theme Waybar
   programs.waybar = {
     enable = true;

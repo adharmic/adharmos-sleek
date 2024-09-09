@@ -1,6 +1,7 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }
 : {
@@ -57,7 +58,7 @@
   };
 
   # The hostname of the machine.
-  networking.hostName = "adharmos";
+  networking.hostName = "${config.globalConfig.hostname}";
   # For connecting to the Internet.
   networking.networkmanager.enable = true;
 

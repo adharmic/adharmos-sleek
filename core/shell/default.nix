@@ -11,6 +11,7 @@
     set -Ux EDITOR 'hx'
     set -Ux MAIN_VAULT 'satyaloka'
     set PATH $PATH ~/.cargo/bin
+    # set -Ux DIREV_LOG_FORMAT ''\''
 
     # App initializers
     fzf --fish | source
@@ -20,11 +21,12 @@
     else
       zellij -l welcome
     end
+    direnv hook fish >/dev/null 2>&1
   '';
   programs.fish.shellAbbrs = {
     # TODO: Replace with global variable to config path
-    hrb = "home-manager switch --flake ~/projects/adharmos#adi@adharmos";
-    nrb = "sudo nixos-rebuild switch --flake ~/projects/adharmos#adharmos";
+    hrb = "home-manager switch --flake ~/projects/adharmos#adi@${config.globalConfig.hostname}";
+    nrb = "sudo nixos-rebuild switch --flake ~/projects/adharmos#${config.globalConfig.hostname}";
     lg = "lazygit";
     lst = "eza --tree --level=2";
     vh = "${config.globalConfig.editor} .";

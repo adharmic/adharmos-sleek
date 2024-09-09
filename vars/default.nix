@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  hostname,
+  ...
+}: {
   options = {
     globalConfig = lib.mkOption {
       type = lib.types.submodule {
@@ -36,7 +40,7 @@
           };
           hostname = lib.mkOption {
             type = lib.types.str;
-            default = "indranet";
+            default = "${hostname}";
             description = "Host name of the system";
           };
         };
@@ -50,6 +54,6 @@
     globalConfig.wallsPath = /home/adi/pictures/wallpapers;
     globalConfig.shell = "fish";
     globalConfig.editor = "hx";
-    globalConfig.hostname = "indranet";
+    globalConfig.hostname = "${hostname}";
   };
 }
