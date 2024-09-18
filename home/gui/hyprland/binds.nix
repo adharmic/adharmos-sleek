@@ -48,7 +48,7 @@
     "$mod, RETURN, exec, ${config.globalConfig.termEmulator}"
     "$mod, R, exec, rofi -show drun"
     # "$mod, U, exec, obsidian"
-    "$mod, E, exec, ${config.globalConfig.termEmulator} -e ranger"
+    "$mod, E, exec, ${config.globalConfig.termEmulator} -e yazi"
     "CONTROL SHIFT, 4, exec, grim -g \"$(slurp)\" - | wl-copy"
     "$mod, T, exec, ${config.globalConfig.termEmulator} -e hx"
     "$mod, Escape, exec, ${config.globalConfig.termEmulator} -e btop"

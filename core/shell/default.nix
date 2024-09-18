@@ -17,11 +17,15 @@
     fzf --fish | source
     zoxide init fish | source
     source (/home/adi/.nix-profile/bin/starship init fish --print-full-init | psub)
-    if set -q ZELLIJ
-    else
-      zellij -l welcome
-    end
     direnv hook fish >/dev/null 2>&1
+    function y
+	    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	    yazi $argv --cwd-file="$tmp"
+	    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		    builtin cd -- "$cwd"
+	    end
+	    rm -f -- "$tmp"
+    end
   '';
   programs.fish.shellAbbrs = {
     # TODO: Replace with global variable to config path

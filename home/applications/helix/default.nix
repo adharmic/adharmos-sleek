@@ -65,10 +65,10 @@
           formatter = {
             command = "prettier";
           };
-          roots = [".zk"];
-          scope = "source.md";
+          # roots = [".zk"];
+          # scope = "source.md";
           file-types = ["md" "markdown"];
-          language-servers = ["zk-lsp"];
+          language-servers = ["markdown-oxide"];
           auto-format = true;
         }
         {

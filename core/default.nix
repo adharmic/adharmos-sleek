@@ -46,6 +46,8 @@
     home-manager
   ];
   fonts.packages = with pkgs; [
+    corefonts
+    vistafonts
     nerdfonts
     google-fonts
     cascadia-code

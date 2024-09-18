@@ -6,6 +6,7 @@
     ./terminal
     ./firefox
     ./filemgmt
+    ./wine
   ];
 
   # UNORGANIZED PACKAGES!
@@ -15,6 +16,9 @@
     rofi-wayland-unwrapped
     vesktop
     swww
+    dioxus-cli
+    sqlite
+    diesel-cli
 
     # Hardware controllers
     pulsemixer
@@ -38,5 +42,9 @@
 
     # shell
     direnv
+    blender
+    unzip
+    python3
+    neofetch
   ];
 }
